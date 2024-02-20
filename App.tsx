@@ -1,20 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from "@react-navigation/native"
+import { useSelector } from "react-redux"
+import { AppStack, AuthStack } from "@navigationStack/stack"
+import { Provider } from "react-redux"
+import store from "@redux/store"
 
-export default function App() {
+const isSignedIn = false
+
+const App = () => {
+
+  // const isSignedIn = useSelector(state => state.firebaseStore.user.uid)
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  <NavigationContainer>
+    { isSignedIn ? <AppStack /> : <AuthStack /> }
+  </NavigationContainer>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default () => {
+  return (
+    <Provider store={store} >
+      <App />
+    </Provider>
+  )
+}
