@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import loadingReducer from '@redux/features/loading/loadingSlice'
 
-export default configureStore({
+const store = configureStore({
     reducer: {
         loading: loadingReducer
     },
@@ -9,3 +9,7 @@ export default configureStore({
         serializableCheck: false
     }))
 })
+
+export type IRootState = ReturnType<typeof store.getState>
+
+export default store ;
