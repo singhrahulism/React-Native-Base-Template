@@ -1,5 +1,7 @@
 import React from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet, StatusBar } from 'react-native'
+
+import { StatusBarHeight } from '@globalStyles'
 
 const AuthScreen = () => {
     return <View style={styles.container}>
@@ -9,7 +11,7 @@ const AuthScreen = () => {
 
 const styles = StyleSheet.create({
     container: {
-        
+        paddingTop: StatusBarHeight
     }
 })
 
