@@ -11,6 +11,7 @@
             "@redux/*": ["src/redux/*"],
             "@utils/*": ["src/utils/*"],
             "@globalStyles": ["src/components/globalStyles/globalStyles"],
+            "@assets/*": ["src/assets/*"],
         }
     }
 }

@@ -21,6 +21,7 @@ module.exports = function(api) {
           root: ["./src"], 
         }
       ],
+      "react-native-reanimated/plugin",
     ]
   };
 };

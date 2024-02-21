@@ -1,10 +1,10 @@
 import { NavigationContainer } from "@react-navigation/native"
-import { useSelector } from "react-redux"
 import { AppStack, AuthStack } from "@navigationStack/stack"
+
 import { Provider } from "react-redux"
 import store from "@redux/store"
 
-const isSignedIn = false
+const isSignedIn = true
 
 const App = () => {
 
