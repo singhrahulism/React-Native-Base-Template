@@ -7,10 +7,10 @@
             "@appStack/*": ["src/screens/AppStack/*"],
             "@authStack/*": ["src/screens/AuthStack/*"],
             "@navigationStack/*": ["src/screens/Navigation/*"],
+            "@globalStyles": ["src/components/globalStyles/globalStyles"],
             "@components/*": ["src/components/*"],
             "@redux/*": ["src/redux/*"],
             "@utils/*": ["src/utils/*"],
-            "@globalStyles": ["src/components/globalStyles/globalStyles"],
             "@assets/*": ["src/assets/*"],
         }
     }
